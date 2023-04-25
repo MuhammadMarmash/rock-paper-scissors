@@ -4,23 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style></style>
-    <script src="app.js" defer></script>
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Roboto:wght@400;700&amp;display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <h3 id="human">0</h3>
-        <h3 id="computer">0</h3>
+    <header>
+        <h1>ROCK PAPER SCISSORS</h1>
+    </header>
+    <main>
+        <div id="scoreBoard">
+            <h2>Choose your weapon</h2>
+            <h3>First to score 5 points wins the game</h3>
+            <div id="scoreArea">
+                <div class="scoreItem">
+                    <div class="sign" id="humanSign">❔</div>
+                    <p class="score" id="humanScore">Human: 0</p>
+                </div>
+                <div class="scoreItem">
+                    <div class="sign" id="computerSign">❔</div>
+                    <p class="score" id="computerScore">Computer: 0</p>
+                </div>
+            </div>
+        </div>
+        <div id="choices">
+            <button class="choice" id="Rock">
+                <div class="sign">✊</div>
+            </button>
+            <button class="choice" id="Paper">
+                <div class="sign">✋</div>
+            </button>
+            <button class="choice" id="Scissors">
+                <div class="sign">✌</div>
+            </button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Copyright ©
+            <script>document.write(new Date().getFullYear())</script> MuhammadMarmash
+        </p>
+        <a href="https://github.com/MuhammadMarmash" target="_blank"><i class="fab fa-github"
+                aria-hidden="true"></i></a>
+    </footer>
+    <div class="modal" id="endgameModal">
+        <p class="modal-title" id="endgameMsg"></p>
+        <button class="btn btn-restart" id="restartBtn">Play again</button>
     </div>
-    <div class="container">
-        <button class="choice">Rock</button>
-        <button class="choice">Paper</button>
-        <button class="choice">Scissors</button>
-    </div>
-    <div id="result"></div>
+    <div class="overlay" id="overlay"></div>
 </body>
 
 </html>
